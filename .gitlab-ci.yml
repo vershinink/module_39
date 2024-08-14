@@ -18,7 +18,7 @@ test:
   stage: test
   image: golang:1.15
   script:
-    - echo "No tests!"
+    - go test ./...
 
 lint:
   stage: test
@@ -37,7 +37,7 @@ build_image:stable:
   script:
     - echo "No build image commands!!!"
   only:
-    - master
+    - main
 
 build_image:latest:
   stage: image
